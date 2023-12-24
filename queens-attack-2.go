@@ -87,13 +87,10 @@ func findPotentialSpaces(v vector, n int32, obstabcles [][]int32, wg *sync.WaitG
                 v.length += 1
                 
                 findPotentialSpaces(v, n, obstabcles, wg, ch)
-                return
         } else { 
                 ch <- v.length
-                
                 wg.Done()
                 fmt.Println("Done")
-                return
         }
 }
 
